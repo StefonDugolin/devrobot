@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif, Arial, Helvetica;
+    background: #F8F9FA;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+
+}
+
+/*cabeçalho*/
+.header {
+    background: #00509E;
+    padding: 0.6rem;
+    padding-left: 1rem;
+    color: #dddddd;
+
+}
+
+.header .logo {
+    font-size: 1.5rem;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 0.2rem
+}
+
+.header p {
+    font-size: 0.85rem;
+    color: #cbd5e0;
+
+}
+
+/*main*/
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+#senha {
+    padding: 1rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #00509E;
+    background-color: #f0f4f8;
+    border: 2px solid #cbd5e0;
+    border-radius: 8px;
+    text-align: center;
+    letter-spacing: 2px;
+    outline: none;
+    cursor: default;
+    user-select: all;
+}
+
+.container-botoes {
+    display: flex;
+    gap: 1rem;
+}
+
+.container-botoes button {
+    min-width: 100px;
+    padding: 0.7rem;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    background-color: #667EEA;
+    color: white;
+    transition: all 0.2s ease;
+
+}
+
+.container-botoes button:hover {
+    background-color: #5A67D8;
+}
+
+.container-botoes button:active {
+    transform: scale(0.95);
+    transition: transform 0.1s;
+}
+
+.conteudo-seguranca {
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.artigo-seguranca {
+    max-width: 800px;
+    line-height: 1.6;
+    color: #333;
+
+}
+
+.artigo-seguranca h2 {
+    color: #667EEA;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.artigo-seguranca h3 {
+    margin-top: 30px;
+    color: #2D3748;
+}
+
+.artigo-seguranca ul {
+    margin: 20px 0;
+    padding-left: 20px;
+    list-style: disc;
+
+}
+
+.artigo-seguranca li {
+    margin-bottom: 10px;
+}
+
+/* Rodapé */
+.rodape {
+    background: #ffffff;
+    text-align: center;
+    color: #4A5568;
+    font-size: 0.85rem;
+    padding: 1rem;
+    border-top: 1px solid #edf2f7;
+}
+
+/* Espaço Publicidade */
+.publicidade {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    padding: 40px 0;
+    width: 100%;
+}
+
+.banner {
+    display: block;
+    width: 200px;
+    height: 180px;
+    text-decoration: none;
+    border: 1px solid #eaeaea;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.banner:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-color: #fff;
+}
+
+
+
+
+/* Responsividade */
+@media (max-width: 600px) {
+    body {
+        /* Mantemos a estrutura de 3 linhas para o footer não subir */
+        grid-template-rows: auto 1fr auto;
+    }
+
+    .main {
+        display: flex;
+        align-items: center;
+        /* ISSO centraliza verticalmente no celular */
+        justify-content: center;
+        /* ISSO centraliza horizontalmente no celular */
+        padding: 20px;
+        /* Se o conteúdo for maior que a tela, permite scroll */
+        min-height: auto;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 320px;
+        /* Largura boa para celulares pequenos */
+        margin: 0 auto;
+        /* Garante centralização horizontal extra */
+    }
+
+    .container-botoes {
+        flex-direction: column;
+        /* Botões um em cima do outro */
+        gap: 10px;
+    }
+
+    .artigo-seguranca h2 {
+        font-size: 1.5rem;
+    }
+}
+
+header {
+    background: #0d4d8b;
+    color: white;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
